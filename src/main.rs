@@ -28,9 +28,9 @@ fn main() {
     loop {
         println!(
             "Please enter a frontend problem id, \n\
-            or \"random\" to generate a random one, \n\
-            or \"solve $i\" to move problem to solution/, \n\
-            or \"all\" to initialize all problems \n"
+            or \"r(random)\" to generate a random one, \n\
+            or \"s(solve) $i\" to move problem to solution/, \n\
+            or \"a(all)\" to initialize all problems \n"
         );
         let mut is_random = false;
         let mut is_solving = false;
@@ -41,9 +41,9 @@ fn main() {
             .expect("Failed to read line");
         let id_arg = id_arg.trim();
 
-        let random_pattern = Regex::new(r"^random$").unwrap();
-        let solving_pattern = Regex::new(r"^solve (\d+)$").unwrap();
-        let all_pattern = Regex::new(r"^all$").unwrap();
+        let random_pattern = Regex::new(r"^r(andom)?$").unwrap();
+        let solving_pattern = Regex::new(r"^s(olve)? (\d+)$").unwrap();
+        let all_pattern = Regex::new(r"^a(ll)?$").unwrap();
 
         if random_pattern.is_match(id_arg) {
             println!("You select random mode.");
