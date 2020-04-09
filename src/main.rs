@@ -57,7 +57,7 @@ fn main() {
             id = solving_pattern
                 .captures(id_arg)
                 .unwrap()
-                .get(1)
+                .get(2)
                 .unwrap()
                 .as_str()
                 .parse()
