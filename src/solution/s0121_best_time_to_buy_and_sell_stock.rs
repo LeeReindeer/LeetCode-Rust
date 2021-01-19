@@ -49,6 +49,7 @@ mod tests {
     fn test_121() {
         assert_eq!(Solution::max_profit(vec![7, 1, 5, 3, 6, 4]), 5);
         assert_eq!(Solution::max_profit(vec![7, 6, 4, 3, 1]), 0);
+        assert_eq!(Solution::max_profit(vec![7, 7, 7, 7, 7]), 0);
         assert_eq!(Solution::max_profit(vec![]), 0);
 
         assert_eq!(Solution::max_profit_brute(vec![7, 1, 5, 3, 6, 4]), 5);
